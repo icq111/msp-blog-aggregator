@@ -36,4 +36,7 @@
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 	<jpa:repositories base-package="pl.msp.repository" entity-manager-factory-ref="emf" transaction-manager-ref="transactionManager"/>
+	
+	<import resource="secturity.xml"/>
+	
 </beans>
