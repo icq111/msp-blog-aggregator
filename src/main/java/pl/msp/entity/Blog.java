@@ -2,12 +2,14 @@ package pl.msp.entity;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Blog {
@@ -16,13 +18,14 @@ public class Blog {
 	@GeneratedValue
 	private Integer id;
 	
+	@Size(min=3, message="Min 3 signs")
 	private String name;
 	
 	@ManyToOne
 	@JoinColumn(name="user_id")
 	private User user;
 	
-	@OneToMany(mappedBy = "blog")
+	@OneToMany(mappedBy = "blog", cascade = CascadeType.REMOVE)
 	private List<Item> items;
 
 	/**

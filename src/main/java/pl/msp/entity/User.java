@@ -2,12 +2,16 @@ package pl.msp.entity;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
 
 @Entity
 public class User {
@@ -16,10 +20,13 @@ public class User {
 	@GeneratedValue
 	private Integer id;
 	
+	@Size(min=3, message="Min 3 signs")
 	private String name;
 	
+	@Email
 	private String email;
 	
+	@Size(min=3, message="Min 3 signs")
 	private String password;
 	
 	private boolean status;
@@ -28,7 +35,7 @@ public class User {
 	@JoinTable
 	private List<Role> roles;
 	
-	@OneToMany(mappedBy = "user")
+	@OneToMany(mappedBy = "user", cascade = CascadeType.REMOVE)
 	private List<Blog> blogs;
 
 	/**
