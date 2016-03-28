@@ -24,7 +24,7 @@
     </div>
   </div>
 </div>
-<c:if test="${param.success eq true}">
+<c:if test="${succes eq true}">
 	<div class="alert alert-success">REGISTERED SUCCESSFULLY</div>
 </c:if>
 
