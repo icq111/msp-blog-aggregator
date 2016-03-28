@@ -13,9 +13,9 @@ public class Role {
 	@Id
 	@GeneratedValue
 	private Integer id;
-	
+
 	private String name;
-	
+
 	@ManyToMany(mappedBy = "roles")
 	private List<User> users;
 
@@ -27,7 +27,8 @@ public class Role {
 	}
 
 	/**
-	 * @param id the id to set
+	 * @param id
+	 *            the id to set
 	 */
 	public void setId(Integer id) {
 		this.id = id;
@@ -41,7 +42,8 @@ public class Role {
 	}
 
 	/**
-	 * @param name the name to set
+	 * @param name
+	 *            the name to set
 	 */
 	public void setName(String name) {
 		this.name = name;
@@ -55,13 +57,11 @@ public class Role {
 	}
 
 	/**
-	 * @param users the users to set
+	 * @param users
+	 *            the users to set
 	 */
 	public void setUsers(List<User> users) {
 		this.users = users;
 	}
-	
-	
-	
-	
+
 }
