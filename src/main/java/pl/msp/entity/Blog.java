@@ -14,11 +14,12 @@ import javax.validation.constraints.Size;
 @Entity
 public class Blog {
 
+	
 	@Id
 	@GeneratedValue
 	private Integer id;
 	
-	@Size(min=3, message="Min 3 signs")
+	@Size(min=3, message="Min 2 signs")
 	private String name;
 	
 	@ManyToOne
