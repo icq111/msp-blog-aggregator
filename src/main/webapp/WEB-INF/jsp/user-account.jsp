@@ -6,11 +6,11 @@
 
 <h1>${user.name}</h1>
 
-<!-- Button trigger modal
+<!-- Button trigger modal -->
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
 	data-target="#myModal">New blog</button>
 <form:form commandName="blog" cssClass="form-horizontal">
-
+	<!-- Modal -->
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
 		aria-labelledby="myModalLabel">
 		<div class="modal-dialog" role="document">
@@ -42,7 +42,7 @@
 
 <br>
 <br>
-<br>-->
+<br>
 <div>
 <script> 
 $(document).ready(function(){
