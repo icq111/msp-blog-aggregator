@@ -5,5 +5,7 @@
 		<class>pl.msp.entity.Role</class>
 		<class>pl.msp.entity.Blog</class>
 		<class>pl.msp.entity.Item</class>
+		<class>pl.msp.entity.Stock</class>
+		<class>pl.msp.entity.Unit</class>
 	</persistence-unit>
 </persistence>

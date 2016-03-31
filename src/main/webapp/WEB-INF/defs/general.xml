@@ -8,7 +8,7 @@
 	</definition>
 
 	<definition name="index" extends="common">
-		<put-attribute name="title" value="MSp aggregator" />
+		<put-attribute name="title" value="Office Manager - OM" />
 		<put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />
 		<put-attribute name="current" value="index" />
 	</definition>
@@ -41,5 +41,17 @@
 		<put-attribute name="title" value="Log In" />
 		<put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
 		<put-attribute name="current" value="login" />
+	</definition>
+	
+			<definition name="stocks" extends="common">
+		<put-attribute name="title" value="Stocks" />
+		<put-attribute name="body" value="/WEB-INF/jsp/stocks.jsp" />
+		<put-attribute name="current" value="stocks" />
+	</definition>
+	
+				<definition name="units" extends="common">
+		<put-attribute name="title" value="Units" />
+		<put-attribute name="body" value="/WEB-INF/jsp/units.jsp" />
+		<put-attribute name="current" value="units" />
 	</definition>
 </tiles-definitions>
