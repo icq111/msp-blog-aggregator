@@ -28,8 +28,10 @@ $(document).ready(function(){
 			</a>
 			</td>
 			<td>
+			<c:if test="${user.name eq principal.name}">
 			<a href='<spring:url value="/users/remove/${user.id}.html"/>' class="btn btn-danger triggerRemove">
 			Remove
+			</c:if>
 			</a>
 			</td>
 		</tr>

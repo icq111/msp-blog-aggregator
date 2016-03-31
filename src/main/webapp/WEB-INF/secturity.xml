@@ -10,8 +10,10 @@
 
 		<intercept-url pattern="/users**" access="hasRole('ADMIN')" />
 		<intercept-url pattern="/users/**" access="hasRole('ADMIN')" />
-		<intercept-url pattern="/stock**" access="hasRole('ADMIN')" />
-		<intercept-url pattern="/stock/**" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/stocks**" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/stocks/**" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/units**" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/units/**" access="hasRole('ADMIN')" />
 		<intercept-url pattern="/account**" access="hasRole('ROLE_USER')" />
 		<form-login login-page="/login.html" login-processing-url="/j_spring_security_check"
 			username-parameter="j_username" password-parameter="j_password"
